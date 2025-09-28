@@ -23,6 +23,14 @@ const userSchema = new mongoose.Schema(
     state: { type: String },
     caste: { type: String },
     gender: { type: String },
+
+    // new field: favorites
+    favorites: {
+      courses: { type: [String], default: [] },
+      colleges: { type: [String], default: [] },
+      careers: { type: [String], default: [] },
+      scholarships: { type: [String], default: [] },
+    },
   },
   { timestamps: true }
 );
